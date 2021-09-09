@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "louakscluster-aad2"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "louakscluster-aad2"
+  template:
+    metadata:
+      labels:
+        app: "louakscluster-aad2"
+    spec:
+      containers:
+        - name: "louakscluster-aad2"
+          image: "contrainer.azurecr.io/louakscluster"
+          ports:
+          - containerPort: 8080
