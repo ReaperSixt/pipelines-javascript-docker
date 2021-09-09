@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: reapersixtpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reapersixtpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: reapersixtpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: reapersixtpipelinesjavascriptdocker 
+          image: contrainer.azurecr.io/reapersixtpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
