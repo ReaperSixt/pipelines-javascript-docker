@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: reapersixtpipelinesjavascriptdocker
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080 
+    selector:
+        app: reapersixtpipelinesjavascriptdocker
